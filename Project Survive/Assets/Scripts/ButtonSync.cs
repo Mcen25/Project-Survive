@@ -6,34 +6,35 @@ using FishNet.Object;
 
 public class ButtonSync : NetworkBehaviour
 {
-    public bool isPressed = false;
+    public GameObject bodyObject;
+    public Color color;
 
     public override void OnStartClient()
     {
         base.OnStartClient();
-        if (base.IsOwner)
+        if (!base.IsOwner)
         {
-            isPressed = false;
+            gameObject.GetComponent<ButtonSync>().enabled = false;
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnMouseDown() {
         // if (base.IsOwner)
         // {
-        //     isPressed = !isPressed;
+            ChangeColorServer(color);
+            Debug.Log("Button Pressed");
         // }
-        Debug.Log("Button Pressed");
+    }
+
+    [ServerRpc]
+    public void ChangeColorServer(Color color)
+    {
+        ChangeColor(color);
+    }
+ 
+    [ObserversRpc]
+    public void ChangeColor(Color color)
+    {
+        bodyObject.GetComponent<Renderer>().material.color = color;
     }
 }
