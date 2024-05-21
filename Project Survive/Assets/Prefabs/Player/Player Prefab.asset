@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player Prefab
   m_EditorClassIdentifier: 
   _prefabs:
-  - {fileID: 8115080587183813918, guid: 308b61ef8e6fd0a4fbe4da539950f69b, type: 3}
+  - {fileID: 5031400690043617905, guid: 276970872b11946f78c04d616a5c24b2, type: 3}
