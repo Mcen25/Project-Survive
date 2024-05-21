@@ -16,10 +16,11 @@ public class ChangeScreen : NetworkBehaviour
     }
     void Update()
     {
-        if (button1.GetComponent<ButtonPressed>().timer < 10 && button2.GetComponent<ButtonPressed>().timer < 10)
-        {
-            ChangeScreenColor(Color.green);
-        }      
+        // if (button1.GetComponent<ButtonPressed>().timer < 10 && button2.GetComponent<ButtonPressed>().timer < 10)
+        // {
+
+        //     ChangeScreenColor(Color.green);
+        // }      
     }
 
     [ObserversRpc]
