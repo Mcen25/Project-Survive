@@ -12,6 +12,7 @@ public class ButtonPressed : NetworkBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("Button pressed");
         StartCoroutine(StartCountdown());
     }
 
@@ -19,6 +20,7 @@ public class ButtonPressed : NetworkBehaviour
     {
         while (timer > 0)
         {
+            Debug.Log(timer);
             yield return new WaitForSeconds(1f);
             timer--;
         }
