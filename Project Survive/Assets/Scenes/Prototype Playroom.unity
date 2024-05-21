@@ -785,7 +785,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 838307110}
   _networkObjectCache: {fileID: 838307110}
-  bodyObject: {fileID: 194780857}
+  targetObject: {fileID: 194780857}
   color: {r: 1, g: 0, b: 0, a: 0}
 --- !u!114 &838307109
 MonoBehaviour:

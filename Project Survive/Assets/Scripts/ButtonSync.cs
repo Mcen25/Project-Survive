@@ -6,35 +6,39 @@ using FishNet.Object;
 
 public class ButtonSync : NetworkBehaviour
 {
-    public GameObject bodyObject;
-    public Color color;
+    public GameObject targetObject; // The object that will change color
+    public Color color; // The color to change to
 
     public override void OnStartClient()
     {
+        targetObject = GameObject.Find("Cube 1");
         base.OnStartClient();
-        if (!base.IsOwner)
+        if (base.IsOwner)
         {
+            
+        } else {
             gameObject.GetComponent<ButtonSync>().enabled = false;
         }
     }
 
-    void OnMouseDown() {
-        // if (base.IsOwner)
+    void OnMouseDown() 
+    {
+        // if (base.IsOwner) // Only the owner can change the color
         // {
-            ChangeColorServer(color);
+            ChangeColorServerRpc(color);
             Debug.Log("Button Pressed");
         // }
     }
 
     [ServerRpc]
-    public void ChangeColorServer(Color color)
+    public void ChangeColorServerRpc(Color color)
     {
-        ChangeColor(color);
+        ChangeColorObserversRpc(color);
     }
  
     [ObserversRpc]
-    public void ChangeColor(Color color)
+    public void ChangeColorObserversRpc(Color color)
     {
-        bodyObject.GetComponent<Renderer>().material.color = color;
+        targetObject.GetComponent<Renderer>().material.color = color;
     }
 }
