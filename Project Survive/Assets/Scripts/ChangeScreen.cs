@@ -16,11 +16,17 @@ public class ChangeScreen : NetworkBehaviour
     }
     void Update()
     {
-        // if (button1.GetComponent<ButtonPressed>().timer < 10 && button2.GetComponent<ButtonPressed>().timer < 10)
-        // {
+        if (button1.GetComponent<ButtonPressed>().countdownStarted == true && button2.GetComponent<ButtonPressed>().countdownStarted == true)
+        {
 
-        //     ChangeScreenColor(Color.green);
-        // }      
+            ChangeScreenColorServer(Color.green);
+        }      
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void ChangeScreenColorServer(Color color)
+    {
+        ChangeScreenColor(color);
     }
 
     [ObserversRpc]
