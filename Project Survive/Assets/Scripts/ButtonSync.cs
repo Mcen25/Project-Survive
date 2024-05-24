@@ -3,41 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using FishNet.Connection;
 using FishNet.Object;
-
+ 
 public class ButtonSync : NetworkBehaviour
 {
-    public GameObject targetObject; // The object that will change color
-    public Color color; // The color to change to
-
+    private GameObject body;
+    public Color endColor;
+    private GameObject buttonSyncObject;
+ 
     public override void OnStartClient()
     {
         base.OnStartClient();
         if (base.IsOwner)
         {
-            
-        } else {
-            gameObject.GetComponent<ButtonSync>().enabled = false;
+            buttonSyncObject = GameObject.Find("BUTTON (2)");
+            body = GameObject.Find("Cube 1");
+        }
+        else
+        {
+            GetComponent<ButtonSync>().enabled = false;
         }
     }
 
-    void OnMouseDown() 
+ private void Update()
     {
-        // if (base.IsOwner) // Only the owner can change the color
-        // {
-            ChangeColorServerRpc(color);
-            Debug.Log("Button Pressed");
-        // }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ChangeColorServer(endColor);
+        }
     }
-
-    [ServerRpc]
-    public void ChangeColorServerRpc(Color color)
+    private void OnMouseDown()
     {
-        ChangeColorObserversRpc(color);
+       if (gameObject.name == "BUTTON (2)")
+       {
+            Debug.Log("Button Clicked");
+            ChangeColorServer(endColor);
+       }
+    }
+ 
+    [ServerRpc]
+    public void ChangeColorServer(Color color)
+    {
+        ChangeColor(color);
     }
  
     [ObserversRpc]
-    public void ChangeColorObserversRpc(Color color)
+    public void ChangeColor(Color color)
     {
-        targetObject.GetComponent<Renderer>().material.color = color;
+        body.GetComponent<Renderer>().material.color = color;
     }
 }
