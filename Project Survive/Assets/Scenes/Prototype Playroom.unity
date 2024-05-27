@@ -521,8 +521,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7443408887813606051, guid: 0b650fca685f2eb41a86538aa883e4c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 311987199}
+    - targetCorrespondingSourceObject: {fileID: 7443408887813606051, guid: 0b650fca685f2eb41a86538aa883e4c1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 311987198}
   m_SourcePrefab: {fileID: 100100000, guid: 0b650fca685f2eb41a86538aa883e4c1, type: 3}
+--- !u!1 &311987197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7443408887813606051, guid: 0b650fca685f2eb41a86538aa883e4c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 311987196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &311987198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311987197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f48f002b825cbd45a19bd96d90f9edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unreliableMTU: 1023
+  _ipv4BindAddress: 
+  _ipv6BindAddress: 
+  _port: 11947
+  _maximumClients: 4095
+  _clientAddress: xmfjtk.edge.hathora.dev
+  _timeout: 15
+--- !u!114 &311987199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311987197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3653f722a962f3649bd19d5038b0d3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connectionType: 1
 --- !u!1001 &346109812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1789,7 +1835,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 1829303239}
   _networkObjectCache: {fileID: 1829303239}
-  timer: 10
+  countdownStarted: 0
 --- !u!1 &2011679538 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc0535e50292d494196b3729b291d70f,
@@ -1846,7 +1892,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 2011679540}
   _networkObjectCache: {fileID: 2011679540}
-  timer: 10
+  countdownStarted: 0
 --- !u!65 &2011679542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2032,7 +2078,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 2079740124}
   _networkObjectCache: {fileID: 2079740124}
-  timer: 10
+  countdownStarted: 0
 --- !u!65 &2079740126
 BoxCollider:
   m_ObjectHideFlags: 0
