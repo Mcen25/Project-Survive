@@ -551,10 +551,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unreliableMTU: 1023
   _ipv4BindAddress: 
-  _ipv6BindAddress: xmfjtk.edge.hathora.dev
-  _port: 62948
+  _ipv6BindAddress: 
+  _port: 11947
   _maximumClients: 4095
-  _clientAddress: localhost
+  _clientAddress: xmfjtk.edge.hathora.dev
   _timeout: 15
 --- !u!114 &311987199
 MonoBehaviour:
