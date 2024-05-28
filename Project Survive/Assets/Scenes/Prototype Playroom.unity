@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 194780862}
   - component: {fileID: 194780863}
   - component: {fileID: 194780864}
+  - component: {fileID: 194780865}
   m_Layer: 0
   m_Name: Cube 1
   m_TagString: Selectable
@@ -322,6 +323,24 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+--- !u!114 &194780865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194780857}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.9214484, b: 0, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &260443134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,7 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 1
   outlineColor: {r: 1, g: 0.9864793, b: 0, a: 1}
   outlineWidth: 10
   precomputeOutline: 0
