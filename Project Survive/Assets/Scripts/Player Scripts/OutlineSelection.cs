@@ -9,7 +9,7 @@ public class OutlineSelection : MonoBehaviour
     private Ray ray;
     private RaycastHit hit;
 
-    private float maxDistance = 2f;
+    public float maxDistance = 5f;
     private Transform previousHighlight = null;
 
     void Update()

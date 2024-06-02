@@ -4,8 +4,6 @@ using UnityEngine;
 using FishNet.Connection;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
-using System.Threading;
-using Unity.VisualScripting;
 
 public class ButtonPressed : NetworkBehaviour
 {
