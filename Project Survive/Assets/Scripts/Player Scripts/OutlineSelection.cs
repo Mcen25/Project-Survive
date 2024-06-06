@@ -50,35 +50,64 @@ public class OutlineSelection : MonoBehaviour
                 previousHighlight.gameObject.GetComponent<Outline>().enabled = false;
                 previousHighlight = null;
             }
-        } else {
-            
-        }
-        
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if (Physics.Raycast(ray, out hit, maxDistance))
+            if (Input.GetButtonDown("Fire1"))
             {
-                highlight = hit.transform;
-                if (highlight.CompareTag("CameraSelectable"))
+                if (Physics.Raycast(ray, out hit, maxDistance))
                 {
-                    //get raycast hit object
-                    //get the object's script pressed to camera
-                    //Switch camera First Person Camera to Overhead Camera
-                    var pressedToCamera = highlight.Find("Button Camera"); 
-                    if (pressedToCamera != null && pressedToCamera != null && currentCamera != null)
+                    highlight = hit.transform;
+                    if (highlight.CompareTag("CameraSelectable"))
                     {
-                        Camera changedCamera = pressedToCamera.GetComponent<Camera>();
-                        currentCamera.enabled = false;
-                        currentCamera = changedCamera;
-                        changedCamera.enabled = true;
-                    }
-                    else
-                    {
-                        Debug.LogError("Camera or OverheadCamera is not assigned.");
+                        //get raycast hit object
+                        //get the object's script pressed to camera
+                        //Switch camera First Person Camera to Overhead Camera
+                        var pressedToCamera = highlight.Find("Button Camera"); 
+                        if (pressedToCamera != null && pressedToCamera != null && currentCamera != null)
+                        {
+                            Camera changedCamera = pressedToCamera.GetComponent<Camera>();
+                            currentCamera.enabled = false;
+                            currentCamera = changedCamera;
+                            changedCamera.enabled = true;
+                        }
+                        else
+                        {
+                            Debug.LogError("Camera or OverheadCamera is not assigned.");
+                        }
                     }
                 }
             }
-        }
+        } else {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+
+             if (highlight != null)
+            {
+                highlight.gameObject.GetComponent<Outline>().enabled = false;
+                highlight = null;
+            }
+            Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
+            if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out hit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
+            {
+                highlight = hit.transform;
+                if (highlight.CompareTag("Selectable"))
+                {
+                    if (highlight.gameObject.GetComponent<Outline>() != null)
+                    {
+                        highlight.gameObject.GetComponent<Outline>().enabled = true;
+                    }
+                    else
+                    {
+                        Outline outline = highlight.gameObject.AddComponent<Outline>();
+                        outline.enabled = true;
+                        highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
+                        highlight.gameObject.GetComponent<Outline>().OutlineWidth = 7.0f;
+                    }
+                }
+                else
+                {
+                    highlight = null;
+                }
+            }
+        }       
     }
 }
