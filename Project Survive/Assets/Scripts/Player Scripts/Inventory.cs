@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FishNet.Object;
 using UnityEngine.UI;
+using System;
 
 public class Inventory : NetworkBehaviour
 {
@@ -22,7 +23,7 @@ public class Inventory : NetworkBehaviour
 
     private Dictionary<int, GameObject> inventory;
     private Dictionary<int, GameObject> inventoryItems;
-    private Dictionary<int, GameObject> currentInventory;
+    public Dictionary<int, GameObject> currentInventory;
 
     void Start() 
     {
@@ -75,6 +76,7 @@ public class Inventory : NetworkBehaviour
             if (highlight.CompareTag("Selectable") && highlight.gameObject.GetComponent<Item>())
             {
                 GameObject highlightedObject = highlight.gameObject;
+                Debug.Log("Highlighting object: " + highlightedObject);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     PickUpItem(highlightedObject);
@@ -83,14 +85,32 @@ public class Inventory : NetworkBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && currentInventory[objectPosition] != null)
+        // Debug.Log(currentInventory[objectPosition]);
+        //  && currentInventory[objectPosition] != null
+        if (Input.GetKeyDown(KeyCode.G))
         {
+            Debug.Log("Dropping item");
             GameObject item = currentInventory[objectPosition];
+            Debug.Log("Item: " + item);
+            
             if (item != null)
             {
-                //TODO: Drop the item
-                item.SetActive(true);
+                // Drop the item
+                GameObject originalObject = currentInventory[objectPosition];
+                GameObject newObject = Instantiate(originalObject, new Vector3(gameObject.transform.position.x, 0.5F, gameObject.transform.position.z), originalObject.transform.rotation) as GameObject;
                 currentInventory[objectPosition] = null;
+
+                // Ensure the new object has a Rigidbody component
+                Rigidbody rb = newObject.GetComponent<Rigidbody>();
+                if (rb == null)
+                {
+                    rb = newObject.AddComponent<Rigidbody>();
+                }
+
+                // Apply a force to the new object
+                Vector3 forceDirection = new Vector3(0, 1, 1); // Example direction (up and forward)
+                float forceMagnitude = 500f; // Example force magnitude
+                rb.AddForce(forceDirection.normalized * forceMagnitude);
             }
 
         }
