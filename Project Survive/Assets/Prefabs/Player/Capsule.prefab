@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bbb2944028326d34ea9d447b63c34756, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30139c152f2d41748a1cad0569ec57ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 2907539920586161298}
   - component: {fileID: 6100383884887155815}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 4807584009328941360}
   - component: {fileID: 4240481837998887907}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Item4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c6b9dd116d7b42418f57cbe74c5b882, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 4620593552621376321}
   - component: {fileID: 98368567560740253}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Item3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,6 +898,7 @@ GameObject:
   - component: {fileID: 2343616633963365833}
   - component: {fileID: 6101985360411872115}
   - component: {fileID: 6772139540964340259}
+  - component: {fileID: 1783175334488127722}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1065,6 +1066,7 @@ MonoBehaviour:
   - {fileID: 2168254023384798828}
   - {fileID: 29763278856382817}
   - {fileID: 6101985360411872115}
+  - {fileID: 1783175334488127722}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   _isNetworked: 1
@@ -1169,6 +1171,33 @@ MonoBehaviour:
   maxDistance: 5
   fpsCamera: {fileID: 1798185426264291903}
   currentCamera: {fileID: 1798185426264291903}
+--- !u!114 &1783175334488127722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935470522538491129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f951c876b34add498e34e8d21ad1bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 3
+  _addedNetworkObject: {fileID: 5031400690043617905}
+  _networkObjectCache: {fileID: 5031400690043617905}
+  selectedFrame: {fileID: 21300000, guid: 30139c152f2d41748a1cad0569ec57ba, type: 3}
+  deselectedFrame: {fileID: 21300000, guid: bbb2944028326d34ea9d447b63c34756, type: 3}
+  InventoryImages:
+  - {fileID: 2750853017861766368}
+  - {fileID: 6744977044259298675}
+  - {fileID: 6212397949995888552}
+  - {fileID: 4443370661328171042}
+  InventoryImagesChildren:
+  - {fileID: 6100383884887155815}
+  - {fileID: 3972185091997338070}
+  - {fileID: 98368567560740253}
+  - {fileID: 4240481837998887907}
 --- !u!1 &9152610695836580666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1210,7 @@ GameObject:
   - component: {fileID: 612892109523786337}
   - component: {fileID: 3972185091997338070}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
