@@ -814,7 +814,7 @@ PlayerSettings:
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   scriptingDefineSymbols:
-    Standalone: STEAMWORKS_NET;FISHNET;FISHNET_V3
+    Standalone: STEAMWORKS_NET;FISHNET;FISHNET_V3;UNITY_PIPELINE_URP
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
