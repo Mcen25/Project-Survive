@@ -24,7 +24,7 @@ public class FPSController : NetworkBehaviour
  
     [SerializeField]
     private float cameraYOffset = 0.4f;
-    private Camera playerCamera;
+    public Camera playerCamera;
  
  
     public override void OnStartClient()
@@ -54,7 +54,9 @@ public class FPSController : NetworkBehaviour
     void Update()
     {
         bool isRunning = false;
- 
+        // if (canMove == true) {
+        //     playerCamera = GetComponent<OutlineSelection>().currentCamera;
+        // }
         // Press Left Shift to run
         isRunning = Input.GetKey(KeyCode.LeftShift);
  

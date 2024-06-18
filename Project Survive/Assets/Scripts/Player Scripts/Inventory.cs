@@ -68,7 +68,7 @@ public class Inventory : NetworkBehaviour
 
     void Update()
     {
-        ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        ray = GetComponent<OutlineSelection>().currentCamera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         if (Physics.Raycast(ray, out hit))
         {
             highlight = hit.transform;

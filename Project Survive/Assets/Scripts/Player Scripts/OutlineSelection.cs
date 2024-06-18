@@ -13,7 +13,7 @@ public class OutlineSelection : MonoBehaviour
     private Transform previousHighlight = null;
     
     [SerializeField] private Camera fpsCamera;
-    [SerializeField] private Camera currentCamera;
+    public Camera currentCamera;
 
     void Update()
     {  
@@ -21,6 +21,8 @@ public class OutlineSelection : MonoBehaviour
     ray = currentCamera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
 
         if(currentCamera.tag == "MainCamera") {
+            GetComponent<FPSController>().canMove = true;
+
             if (Physics.Raycast(ray, out hit, maxDistance))
             {
                 highlight = hit.transform;
@@ -77,14 +79,27 @@ public class OutlineSelection : MonoBehaviour
                 }
             }
         } else {
+            //disable movement
+            GetComponent<FPSController>().canMove = false;
+
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
 
-             if (highlight != null)
+            if (Input.GetKeyDown(KeyCode.Q)) {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                currentCamera.enabled = false;
+                fpsCamera.enabled = true;
+                currentCamera = fpsCamera;
+            }
+
+            if (highlight != null)
             {
                 highlight.gameObject.GetComponent<Outline>().enabled = false;
                 highlight = null;
             }
+
+
             Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
             if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out hit)) //Make sure you have EventSystem in the hierarchy before using EventSystem
             {
