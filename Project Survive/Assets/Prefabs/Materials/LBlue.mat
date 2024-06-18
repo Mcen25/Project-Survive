@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue
+  m_Name: LBlue
   m_Shader: {fileID: 4800000, guid: be891319084e9d147b09d89e80ce60e0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -158,7 +158,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 92948467b299f6f4d8d021f48961d5f7, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapForMatCap:
@@ -393,8 +393,8 @@ Material:
     - _Is_LightColor_RimLight: 1
     - _Is_NormalMapForMatCap: 0
     - _Is_NormalMapToBase: 0
-    - _Is_NormalMapToHighColor: 1
-    - _Is_NormalMapToRimLight: 1
+    - _Is_NormalMapToHighColor: 0
+    - _Is_NormalMapToRimLight: 0
     - _Is_Ortho: 0
     - _Is_OutlineTex: 0
     - _Is_PingPong_Base: 0
@@ -527,15 +527,15 @@ Material:
     - _utsVersionY: 10
     - _utsVersionZ: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 0.09656706, g: 0.08646317, b: 0.6320754, a: 1}
+    - _1st_ShadeColor: {r: 0.46111932, g: 0.45692417, b: 0.6415094, a: 1}
     - _2nd_ShadeColor: {r: 0, g: 0, b: 0, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 0.39560342, g: 0.45713258, b: 0.6603774, a: 1}
+    - _BaseColor: {r: 0.68182623, g: 0.7307733, b: 0.8867924, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColorMaskColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.3956034, g: 0.45713258, b: 0.6603774, a: 1}
+    - _Color: {r: 0.6818262, g: 0.7307733, b: 0.8867924, a: 1}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
