@@ -4,6 +4,7 @@ using UnityEngine;
 using FishNet.Object;
 using UnityEngine.UI;
 using System;
+using Unity.VisualScripting;
 
 public class Inventory : NetworkBehaviour
 {
@@ -23,7 +24,7 @@ public class Inventory : NetworkBehaviour
 
     private Dictionary<int, GameObject> inventory;
     private Dictionary<int, GameObject> inventoryItems;
-    public Dictionary<int, GameObject> currentInventory;
+    List<GameObject> currentInventory = new List<GameObject> { null, null, null, null };
 
     void Start() 
     {
@@ -45,13 +46,6 @@ public class Inventory : NetworkBehaviour
             { 3, InventoryImagesChildren[3].gameObject}
         };
 
-        currentInventory = new Dictionary<int, GameObject>
-        {
-            { 0, null},
-            { 1, null},
-            { 2, null},
-            { 3, null}
-        };
     }
 
     public override void OnStartClient()
@@ -89,30 +83,7 @@ public class Inventory : NetworkBehaviour
         //  && currentInventory[objectPosition] != null
         if (Input.GetKeyDown(KeyCode.G))
         {
-            Debug.Log("Dropping item");
-            GameObject item = currentInventory[objectPosition];
-            Debug.Log("Item: " + item);
-            
-            if (item != null)
-            {
-                // Drop the item
-                GameObject originalObject = currentInventory[objectPosition];
-                GameObject newObject = Instantiate(originalObject, new Vector3(gameObject.transform.position.x, 0.5F, gameObject.transform.position.z), originalObject.transform.rotation) as GameObject;
-                currentInventory[objectPosition] = null;
-
-                // Ensure the new object has a Rigidbody component
-                Rigidbody rb = newObject.GetComponent<Rigidbody>();
-                if (rb == null)
-                {
-                    rb = newObject.AddComponent<Rigidbody>();
-                }
-
-                // Apply a force to the new object
-                Vector3 forceDirection = new Vector3(0, 1, 1); // Example direction (up and forward)
-                float forceMagnitude = 500f; // Example force magnitude
-                rb.AddForce(forceDirection.normalized * forceMagnitude);
-            }
-
+            DropItem();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -167,11 +138,11 @@ public class Inventory : NetworkBehaviour
         }
     }
 
-    private void PickUpItem(GameObject item) {
-    
+    public void PickUpItem(GameObject item) {
         if (currentInventory[objectPosition] == null)
         {
             currentInventory[objectPosition] = item;
+            Debug.Log("Picked up item: " + item.name);
         } else {
             Debug.LogError("Inventory slot is already occupied.");
         } 
@@ -192,7 +163,36 @@ public class Inventory : NetworkBehaviour
         else
         {
             Debug.LogError($"Inventory item with key {objectPosition} not found.");
-
         }
+    }
+
+    private void DropItem() {
+        // Debug.Log("Dropping item");
+            GameObject item = currentInventory[objectPosition];
+            // Debug.Log("Item: " + item);
+            
+            if (item != null)
+            {
+                // Drop the item
+                GameObject originalObject = currentInventory[objectPosition];
+                GameObject newObject = Instantiate(originalObject, new Vector3(gameObject.transform.position.x, 0.5F, gameObject.transform.position.z), originalObject.transform.rotation) as GameObject;
+                currentInventory[objectPosition] = null;
+
+                // Ensure the new object has a Rigidbody component
+                Rigidbody rb = newObject.GetComponent<Rigidbody>();
+                if (rb == null)
+                {
+                    rb = newObject.AddComponent<Rigidbody>();
+                }
+
+                // Apply a force to the new object
+                Vector3 forceDirection = new Vector3(0, 1, 1); // Example direction (up and forward)
+                float forceMagnitude = 500f; // Example force magnitude
+                rb.AddForce(forceDirection.normalized * forceMagnitude);
+            }
+            else
+            {
+                Debug.LogError("No item to drop.");
+            }
     }
 }
