@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cube 1
+  - Selectable
+  - CameraSelectable
+  - Item
   layers:
   - Default
   - TransparentFX
