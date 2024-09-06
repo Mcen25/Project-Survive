@@ -259,11 +259,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _1st2nd_Shades_Feather: 0.068
+    - _1st2nd_Shades_Feather: 0.0001
     - _1st_ShadeColor_Feather: 0.0001
-    - _1st_ShadeColor_Step: 0.968
-    - _2nd_ShadeColor_Feather: 0.068
-    - _2nd_ShadeColor_Step: 0.852
+    - _1st_ShadeColor_Step: 0.907
+    - _2nd_ShadeColor_Feather: 0.0001
+    - _2nd_ShadeColor_Step: 0.79
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ARSampler_AlphaOn: 0
@@ -293,7 +293,7 @@ Material:
     - _AutoRenderQueue: 1
     - _BaseColorOverridden: 0
     - _BaseColorVisible: 1
-    - _BaseColor_Step: 0.968
+    - _BaseColor_Step: 0.907
     - _BaseShade_Feather: 0.0001
     - _Base_Speed: 0
     - _Blend: 0
@@ -301,7 +301,7 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _BlurLevelMatcap: 0
     - _BlurLevelSGM: 0
-    - _BumpScale: 1
+    - _BumpScale: 0.6
     - _BumpScaleMatcap: 1
     - _CameraRolling_Stabilizer: 0
     - _CastShadows: 1
@@ -458,7 +458,7 @@ Material:
     - _SecondShadeOverridden: 0
     - _SecondShadeVisible: 1
     - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0.852
+    - _ShadeColor_Step: 0.79
     - _Smoothness: 0.432
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -513,7 +513,7 @@ Material:
     - _Tweak_MatcapMaskLevel: 0
     - _Tweak_RimLightMaskLevel: 0
     - _Tweak_ShadingGradeMapLevel: 0
-    - _Tweak_SystemShadowsLevel: 0.108
+    - _Tweak_SystemShadowsLevel: 0.5
     - _Tweak_transparency: 0
     - _UVBase: 0
     - _UVDetail: 0
