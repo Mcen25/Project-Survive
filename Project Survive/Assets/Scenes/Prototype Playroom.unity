@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &183716605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183716606}
+  m_Layer: 0
+  m_Name: ____________________EVERYTHING ELSE__________________________________
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &183716606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183716605}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.202585, y: -10.299248, z: 18.274107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194780857
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +354,7 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &194780865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +386,7 @@ GameObject:
   - component: {fileID: 254843016}
   - component: {fileID: 254843015}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,6 +958,7 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &509250017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,6 +1050,37 @@ Transform:
   m_Children:
   - {fileID: 1690123255}
   - {fileID: 980703286}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &538460660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 538460661}
+  m_Layer: 0
+  m_Name: ____________________MANAGERS_________________________________________
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &538460661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538460660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.202585, y: -10.299248, z: 18.274107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &635242670 stripped
@@ -1121,6 +1185,7 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &635242677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,6 +1201,82 @@ MonoBehaviour:
   _overrideType: 3
   _updateHostVisibility: 1
   _observerConditions: []
+--- !u!1 &656633683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656633684}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &656633684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656633683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &696634727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 696634728}
+  - component: {fileID: 696634729}
+  m_Layer: 0
+  m_Name: SoundMixerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &696634728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696634727}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696634729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696634727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63572187e9a2b7541ab3d03fa0f94689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
 --- !u!1 &712348584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 89d82a00dffbe44399a4b20f779d53dd,
@@ -1258,6 +1399,7 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &838307111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1544,7 +1686,7 @@ GameObject:
   - component: {fileID: 1360011744}
   - component: {fileID: 1360011745}
   m_Layer: 0
-  m_Name: SFX Manager
+  m_Name: SFXManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1577,6 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839a7e3360aff764c93cfcc894447c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundFXObject: {fileID: 0}
 --- !u!1 &1433276134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2188,7 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &1829303244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2119,6 +2263,7 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &2011679541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,7 +2315,7 @@ GameObject:
   - component: {fileID: 2042504523}
   - component: {fileID: 2042504524}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Also ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2328,6 +2473,7 @@ MonoBehaviour:
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &2079740125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2968,13 +3114,13 @@ MonoBehaviour:
   <SceneId>k__BackingField: 4354333474439320389
   <AssetPathHash>k__BackingField: 0
   _sceneNetworkObjects:
-  - {fileID: 8075610972644472532}
   - {fileID: 194780864}
   - {fileID: 509250016}
   - {fileID: 635242676}
   - {fileID: 1829303239}
   - {fileID: 2011679540}
   - {fileID: 2079740124}
+  - {fileID: 8075610972644472532}
 --- !u!114 &8075610972644472533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3065,9 +3211,15 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 538460661}
+  - {fileID: 311987196}
+  - {fileID: 1261998213}
+  - {fileID: 1360011744}
+  - {fileID: 696634728}
+  - {fileID: 656633684}
+  - {fileID: 183716606}
   - {fileID: 1433276136}
   - {fileID: 2042504522}
-  - {fileID: 311987196}
   - {fileID: 194780861}
   - {fileID: 509250015}
   - {fileID: 1590680401}
@@ -3076,8 +3228,6 @@ SceneRoots:
   - {fileID: 260443134}
   - {fileID: 346109812}
   - {fileID: 518171696}
-  - {fileID: 1261998213}
   - {fileID: 254843018}
   - {fileID: 1139942053}
-  - {fileID: 1360011744}
   - {fileID: 7372548161363317945}
