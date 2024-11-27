@@ -543,6 +543,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BUTTON (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8631904904989653033, guid: dc0535e50292d494196b3729b291d70f,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d72811ea72cb4488a6e7667c233cb22, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2184,6 +2189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BUTTON
       objectReference: {fileID: 0}
+    - target: {fileID: 8631904904989653033, guid: dc0535e50292d494196b3729b291d70f,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d72811ea72cb4488a6e7667c233cb22, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3008,7 +3018,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: a2226e918a266cf44ae7b0ccb3fb83d9, type: 3}
+  - {fileID: 2100000, guid: 5f284152de884cf4094c0ce35ba40966, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

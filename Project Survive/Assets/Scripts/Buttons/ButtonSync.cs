@@ -24,7 +24,7 @@ public class ButtonSync : NetworkBehaviour
         }
     }
 
- private void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
