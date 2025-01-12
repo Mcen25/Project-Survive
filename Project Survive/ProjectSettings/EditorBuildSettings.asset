@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Bootstrap.unity
+    guid: df12f03027544204b8ebb68ecfbeab23
+  - enabled: 1
+    path: Assets/Scenes/Menu/Main Menu.unity
+    guid: 047c9c320948dd1488f3cdc36b1bee8a
+  - enabled: 1
     path: Assets/Scenes/Prototype Scenes/Prototype Playroom.unity
     guid: a948a27167a308849b426994a850b967
   - enabled: 0
