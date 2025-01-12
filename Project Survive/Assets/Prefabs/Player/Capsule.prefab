@@ -1047,6 +1047,7 @@ MonoBehaviour:
   lookXLimit: 60
   canMove: 1
   cameraYOffset: 0.4
+  playerCamera: {fileID: 0}
 --- !u!114 &5031400690043617905
 MonoBehaviour:
   m_ObjectHideFlags: 0
