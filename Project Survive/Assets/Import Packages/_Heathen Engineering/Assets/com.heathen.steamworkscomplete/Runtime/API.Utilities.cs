@@ -84,6 +84,30 @@ namespace HeathenEngineering.SteamworksIntegration.API
             return result;
         }
 
+        public static bool FindToken(string openPattern, string closePattern, string input, out string result)
+        {
+            if(input.Contains(openPattern) && input.Contains(closePattern))
+            {
+                var lastOpenIndex = input.LastIndexOf(closePattern);
+                var afterLastCloseIndex = input.IndexOf(closePattern, lastOpenIndex);
+                if (afterLastCloseIndex != -1)
+                {
+                    result = input.Substring(lastOpenIndex, (afterLastCloseIndex - lastOpenIndex) + 1);
+                    return true;
+                }
+                else
+                {
+                    result = string.Empty;
+                    return false;
+                }
+            }
+            else
+            {
+                result = string.Empty;
+                return false;
+            }
+        }
+
         public static class Client
         {
             [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]

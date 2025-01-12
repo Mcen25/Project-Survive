@@ -105,7 +105,7 @@ MonoBehaviour:
   sortMethod: 2
   displayType: 1
   apiName: Feet Traveled
-  maxDetailEntries: 3
+  maxDetailEntries: 0
   UserEntryUpdated:
     m_PersistentCalls:
       m_Calls: []

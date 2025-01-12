@@ -5,3 +5,11 @@ PrefabImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 246652
+  packageName: Toolkit for Steamworks Legacy
+  packageVersion: 3.5
+  assetPath: Assets/Import Packages/_Heathen Engineering/Assets/com.heathen.steamworkscomplete/Prefabs/Leaderboard
+    List.prefab
+  uploadId: 700263
