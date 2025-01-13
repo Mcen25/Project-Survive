@@ -8,7 +8,7 @@ public class BootstrapManager : MonoBehaviour
     private static BootstrapManager instance;
     private void Awake() => instance = this;
  
-    [SerializeField] private string menuName = "Main Menu";
+    [SerializeField] private string menuName = "MenuSceneSteam";
     [SerializeField] private NetworkManager _networkManager;
     [SerializeField] private FishySteamworks.FishySteamworks _fishySteamworks;
  
@@ -58,7 +58,7 @@ public class BootstrapManager : MonoBehaviour
     {
         CurrentLobbyID = callback.m_ulSteamIDLobby;
         
-        // MainMenuManager.LobbyEntered(SteamMatchmaking.GetLobbyData(new CSteamID(CurrentLobbyID), "name"), _networkManager.IsServer);
+        MainMenuManager.LobbyEntered(SteamMatchmaking.GetLobbyData(new CSteamID(CurrentLobbyID), "name"), _networkManager.IsServer);
         
         _fishySteamworks.SetClientAddress(SteamMatchmaking.GetLobbyData(new CSteamID(CurrentLobbyID), "HostAddress"));
         _fishySteamworks.StartConnection(false);

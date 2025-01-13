@@ -66,6 +66,6 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         string[] scenesToClose = new string[] { "MenuSceneSteam" };
-        // BootstrapNetworkManager.ChangeNetworkScene("SteamGameScene", scenesToClose);
+        BootstrapNetworkManager.ChangeNetworkScene("SteamGameScene", scenesToClose);
     }
 }
