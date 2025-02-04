@@ -3,7 +3,27 @@ guid: 9ab5bac3b19fb0c49830cdeb2efd0748
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ComputerDesk
+    second: {fileID: 2100000, guid: 279000543cff6f24e83ec8fab5e3a92e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkGray
+    second: {fileID: 2100000, guid: 73e7deae5267b6b489e57a98e94779e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: ef40c206436f5fb40aa3867b9b120140, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: eab889d99bf61854c8186438bcc73ba4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
